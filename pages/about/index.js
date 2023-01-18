@@ -70,10 +70,7 @@ const About = () => {
               Oh iya Bil, kamu tertarik dunia pemrograman ga?, aku tertarik
               bwangeweet
             </p>
-            <p className="m-0 text-black">Makasi waktunya</p>
-            <p className="text-xs text-yellow-100">
-              Salam jaket biru, pada hari selasa
-            </p>
+            <p className="m-0 text-black">Makasi waktunya ya</p>
           </div>
         ) : null}
 
