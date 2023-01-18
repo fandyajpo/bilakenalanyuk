@@ -3,6 +3,8 @@ import { Button, useModal, Modal } from "@geist-ui/core";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import NextJS from "../../public/next.svg";
 const About = () => {
   const { visible, setVisible, bindings } = useModal();
   const router = useRouter();
@@ -64,15 +66,11 @@ const About = () => {
             <p className="m-0 ">
               Web ini memang sengaja aku buat untuk kenalan sama Bila
             </p>
-            <p className="m-0 text-black">Aku Anak IDC Bil</p>
             <p className="m-0 text-black">Salam Kenal yo</p>
-            <p className="m-0 text-black">
-              Oh iya Bil, kamu tertarik dunia pemrograman ga?, aku tertarik
-              bwangeweet
-            </p>
             <p className="m-0 text-black">Makasi waktunya ya</p>
           </div>
         ) : null}
+        <Image src={NextJS} className={"w-36 h-36 p-4"} />
 
         {/* <div class="flex flex-row items-center overflow-x-scroll px-4 gap-2">
           {Kesukaan.map((s, key) => {
