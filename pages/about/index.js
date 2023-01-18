@@ -2,7 +2,7 @@ import BackHandler from "@/components/backHandler";
 import { Button, useModal, Modal } from "@geist-ui/core";
 import { useState } from "react";
 import { useRouter } from "next/router";
-
+import { motion } from "framer-motion";
 const About = () => {
   const { visible, setVisible, bindings } = useModal();
   const router = useRouter();
@@ -29,8 +29,22 @@ const About = () => {
         {!boleh ? (
           <div className="p-3">
             <p>Ini yang bener boleh kenalan?</p>
-            <Button onClick={() => router.back()}>Gak Boleh Kenalan</Button>
-            <Button onClick={() => setVisible(true)}>Boleh Kenalan</Button>
+            <div className="flex gap-2">
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <Button onClick={() => router.back()}>Gak Boleh Kenalan</Button>
+              </motion.div>
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <Button onClick={() => setVisible(true)}>Boleh Kenalan</Button>
+              </motion.div>
+            </div>
           </div>
         ) : (
           <div className="px-3">
