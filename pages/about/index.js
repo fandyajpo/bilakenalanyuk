@@ -37,14 +37,24 @@ const About = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <Button onClick={() => router.back()}>Gak Boleh Kenalan</Button>
+                <button
+                  className="p-2 bg-orange-300 rounded-xl border text-orange-700 border-orange-500"
+                  onClick={() => router.back()}
+                >
+                  Gak Boleh Kenalan
+                </button>
               </motion.div>
               <motion.div
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <Button onClick={() => setVisible(true)}>Boleh Kenalan</Button>
+                <button
+                  className="p-2 bg-orange-300 rounded-xl border text-orange-700 border-orange-500"
+                  onClick={() => setVisible(true)}
+                >
+                  Boleh Kenalan
+                </button>
               </motion.div>
             </div>
           </div>
@@ -70,7 +80,7 @@ const About = () => {
             <p className="m-0 text-black">Makasi waktunya ya</p>
           </div>
         ) : null}
-        <Image src={NextJS} className={"w-36 h-36 p-4"} />
+        {/* <Image src={NextJS} className={"w-36 h-36 p-4"} /> */}
 
         {/* <div class="flex flex-row items-center overflow-x-scroll px-4 gap-2">
           {Kesukaan.map((s, key) => {
